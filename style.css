@@ -1,0 +1,271 @@
+body{
+    width: 90%;
+    padding-right: 70px;
+    padding-left: 70px;
+    background-color: white;
+ }
+
+ :root {
+     --aboutme: rgb(32, 149, 221);
+     --papers: lightblue;
+     --experiencehbs: rgb(127, 200, 178);
+     --Blgs: rgb(127, 200, 178);
+     --contact:rgb(238, 212, 229);
+ }
+ 
+ .container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+     grid-template-areas: 
+     "topnav topnav topnav topnav" 
+     "aboutme info info info" 
+     "education education Achievements Achievements" 
+     "experience experience blogs blogs " 
+     "papers papers papers papers" 
+     "paper1 paper2 paper3 paper4" 
+     "paper5 paper6 paper7 paper8"
+     "images images images images"
+     "paperimages1 paperimages2 paperimages3 paperimages4"
+     "contact contact contact contact";
+     grid-gap: 0.3rem;
+     grid-template-rows: 100px 300px;
+     padding: 10px;
+     background-color: peachpuff;
+ }
+ 
+ .heading {
+     background-color: grey;
+     padding: 1px;
+     color: black;
+     font-size: 17px;
+     font-weight: bold;
+     text-align: center;
+     font-family: cursive;
+ }
+ 
+ nav {
+     grid-area: topnav;
+ }
+
+ #About img{
+    height: 275px;
+    width: 350px;
+ }
+ 
+ #aboutme {
+     background-color: var(--aboutme);
+     grid-area: aboutme;
+ }
+ 
+ #info {
+    text-align: center;
+    background-color: var(--aboutme);
+    grid-area: info;
+    color: black;
+    font-size: 17px;
+ }
+ #education{
+    grid-area: education;
+    background-color: rgb(127, 200, 178);
+ }
+ 
+ #papers {
+     grid-area: papers;
+     background-color: grey;
+ }
+ 
+ #paper1,
+ #paper2,
+ #paper3,
+ #paper4,
+ #paper5,
+ #paper6,
+ #paper7,
+ #paper8
+{
+    text-align: center;
+     background-color: var(--papers);
+ }
+ #paper1{
+    grid-area: paper1;
+ }
+ #paper2{
+    grid-area: paper2;
+ }
+ #paper3{
+    grid-area: paper3;
+ }
+ #paper4{
+    grid-area: paper4;
+ }
+ #paper5{
+    grid-area: paper5;
+ }
+ #paper6{
+    grid-area: paper6;
+ }
+ #paper7{
+    grid-area: paper7;
+ }
+ #paper8{
+    grid-area: paper8;
+ }
+ 
+ #experience {
+     background-color: var(--experiencehbs);
+     grid-area: experience;
+ }
+ 
+ 
+ #Achievements {
+     background-color: rgb(127, 200, 178);
+     grid-area: Achievements;
+ }
+ 
+ #blogs {
+     background-color: var(--Blgs);
+     grid-area: blogs;
+ }
+ 
+ #images{
+    grid-area: images;
+    background-color: grey;;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#paperimages1 img,
+#paperimages2 img,
+#paperimages3 img,
+#paperimages4 img
+{
+    height: 180px;
+    width: 320px;
+ }
+ 
+#paperimages1{
+   grid-area: paperimages1;
+   display: inline-block;
+    padding: 4px;
+    margin : 1px;
+}
+#paperimages2{
+    grid-area: paperimages2;
+    display: inline-block;
+     padding: 4px;
+     margin : 1px;
+ }
+ #paperimages3{
+    grid-area: paperimages3;
+    display: inline-block;
+     padding: 4px;
+     margin : 1px;
+ }
+ #paperimages4{
+    grid-area: paperimages4;
+    display: inline-block;
+     padding: 4px;
+     margin : 1px;
+ }
+
+ #contact {
+     background-color: var(--contact);
+     grid-area: contact;
+     text-align: center;
+ }
+ 
+ .whitetext {
+     color: black;
+     font-weight: bold;
+ }
+ 
+ .topnavclass {
+     overflow: visible;
+     background-color: lightcoral;
+ }
+ 
+ .topnavclass a {
+     float: right;
+     display: block;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 18px;
+     font-family: cursive;
+ }
+  
+ .padd {
+     padding: 15px;
+ }
+ 
+ .row {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+ }
+ 
+ .column {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ #contact img{
+    height:30px;
+    width:30px;
+    padding: 5px;
+ }
+
+ @media only screen and (max-width:500px) {
+     .container {
+         grid-template-columns: 1fr;
+         grid-template-rows: 0.2fr 0.0fr 0.5fr 0.5fr 0.5fr 0.5fr 0.1fr 0.1fr 0.5fr 0.5fr 0.5fr 0.3fr;
+         gap: 0.2em;
+         background-color: peachpuff;
+         grid-template-areas: 
+         "topnav" 
+         "aboutme" 
+         "info" 
+         "education"
+         "experience" 
+         "Achievements" 
+         "blogs"
+         "papers" 
+         "paper1" 
+         "paper2" "paper3" "paper4" "paper5" "paper6" "paper7" "paper8" 
+         "images" "paperimages1" "paperimages2" "paperimages3" "paperimages4" 
+         "contact";
+     }
+     
+     #About img{
+        height: 300px;
+        width: 420px;
+     }
+     #images img{
+        height: 250px;
+        width: 342px;
+        padding: 5px;
+     }
+     #contact img{
+        height:30px;
+        width:30px;
+        padding: 5px;
+     }
+     nav{
+        display:none;
+    }
+    .heading{
+        text-align: center;
+    }  
+    #paperimages1 img,
+    #paperimages2 img,
+    #paperimages3 img,
+    #paperimages4 img{
+            height: 200px;
+            width: 400px;
+         }
+ }
+
